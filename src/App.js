@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import { Routes, Route } from "react-router-dom";
+import { ContextProvider } from "././useContext/ContextProvider";
+import Home from "./Home";
+import Box from "././useContext/Box";
+import Screen from "././useContext/Screen";
+import Text from "././useContext/Text";
+import UseCallBack from "./useCallBack/UseCallBack";
+import UseMemoComp from "./useMemo/UseMemo";
+import UseReducer from "./useReducer/UseReducer";
+import UseTransition from "./useTransition/UseTransition";
+import UseDeferredValue from "./useDeferredValue/UseDeferredValue";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContextProvider>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/screen" element={<Screen />} />
+        <Route path="/box" element={<Box />} />
+        <Route path="/text" element={<Text />} />
+        <Route path="/useMemo" element={<UseMemoComp />} />
+        <Route path="/useCallBack" element={<UseCallBack />} />
+        <Route path="/useReducer" element={<UseReducer />} />
+        <Route path="/useTransition" element={<UseTransition />} />
+        <Route path="/useDeferredValue" element={<UseDeferredValue />} />
+        <Route path="*" element={<div>404 Not Found</div>} />
+      </Routes>
+    </ContextProvider>
   );
 }
 
