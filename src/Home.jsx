@@ -11,6 +11,7 @@ const Home = () => {
                 <Link to="/useReducer">useReducer</Link>
                 <Link to="/useTransition">useTransition</Link>
                 <Link to="/useDeferredValue">useDeferredValue</Link>
+                <Link to="/UseLayoutEffect">UseLayoutEffect</Link>
 
             </div>
         </div>
