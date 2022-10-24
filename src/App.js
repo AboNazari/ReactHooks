@@ -12,6 +12,8 @@ import UseReducer from "./useReducer/UseReducer";
 import UseTransition from "./useTransition/UseTransition";
 import UseDeferredValue from "./useDeferredValue/UseDeferredValue";
 import UseLayoutEffect from "./useLayoutEffect/UseLayoutEffect";
+import UseId from "./useId/UseId";
+
 function App() {
   return (
     <ContextProvider>
@@ -26,6 +28,7 @@ function App() {
         <Route path="/useTransition" element={<UseTransition />} />
         <Route path="/useDeferredValue" element={<UseDeferredValue />} />
         <Route path="/UseLayoutEffect" element={<UseLayoutEffect />} />
+        <Route path="/UseId" element={<UseId />} />
         <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
     </ContextProvider>
